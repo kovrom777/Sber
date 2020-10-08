@@ -128,7 +128,7 @@ extension NewsViewController: UITableViewDataSource {
             assertionFailure("Cell is not available")
             return UITableViewCell()
         }
-        
+
         if let item = rssItems?[indexPath.item] {
             cell.item = item
             cell.selectionStyle = .none
@@ -144,6 +144,29 @@ extension NewsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        rssItems?[indexPath.item].isRead = true
+
+        let item = rssItems?[indexPath.item]
+
+        guard let description = item?.description else {
+            return
+        }
+
+        guard let title = item?.title else {
+            return
+        }
+
+        guard let publicationDate = item?.publicationDate else {
+            return
+        }
+
+        //Убираем теги из текста новости
+        let res = description.replacingOccurrences(of: "</p>", with: "\n").replacingOccurrences(of: "<p>", with: "")
+            .replacingOccurrences(of: "<[^>]+>", with: " ", options: String.CompareOptions.regularExpression, range: nil)
+            .replacingOccurrences(of: "  ", with: " ")
+
+        let aboutNewsVC = AboutNewsViewController(title: title, description: res, publicationDate: publicationDate)
+        self.navigationController?.pushViewController(aboutNewsVC, animated: true)
     }
 
 }

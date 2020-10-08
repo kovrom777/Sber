@@ -14,6 +14,7 @@
 		E030D16F252F310800E211A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E030D16E252F310800E211A3 /* Assets.xcassets */; };
 		E030D172252F310800E211A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E030D170252F310800E211A3 /* LaunchScreen.storyboard */; };
 		E072B3D5252F37C20020242A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072B3D4252F37C20020242A /* NewsTableViewCell.swift */; };
+		E072B3D9252F390C0020242A /* AboutNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E072B3D8252F390C0020242A /* AboutNewsViewController.swift */; };
 		E098AB88252F346C0050F26C /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E098AB87252F346C0050F26C /* Parser.swift */; };
 		E098AB8B252F34AC0050F26C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E098AB8A252F34AC0050F26C /* NewsModel.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		E030D171252F310800E211A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E030D173252F310800E211A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E072B3D4252F37C20020242A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E072B3D8252F390C0020242A /* AboutNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutNewsViewController.swift; sourceTree = "<group>"; };
 		E098AB87252F346C0050F26C /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		E098AB8A252F34AC0050F26C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				E030D169252F310500E211A3 /* NewsViewController.swift */,
+				E072B3D8252F390C0020242A /* AboutNewsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				E030D166252F310500E211A3 /* AppDelegate.swift in Sources */,
 				E030D168252F310500E211A3 /* SceneDelegate.swift in Sources */,
 				E098AB8B252F34AC0050F26C /* NewsModel.swift in Sources */,
+				E072B3D9252F390C0020242A /* AboutNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

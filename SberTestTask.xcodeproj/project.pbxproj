@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EC702B8AE32485CAC5F8009 /* Pods_SberTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE290E82C86D53645FF4715 /* Pods_SberTestTask.framework */; };
 		E030D166252F310500E211A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D165252F310500E211A3 /* AppDelegate.swift */; };
 		E030D168252F310500E211A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D167252F310500E211A3 /* SceneDelegate.swift */; };
-		E030D16A252F310500E211A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D169252F310500E211A3 /* ViewController.swift */; };
-		E030D16D252F310500E211A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E030D16B252F310500E211A3 /* Main.storyboard */; };
+		E030D16A252F310500E211A3 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E030D169252F310500E211A3 /* NewsViewController.swift */; };
 		E030D16F252F310800E211A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E030D16E252F310800E211A3 /* Assets.xcassets */; };
 		E030D172252F310800E211A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E030D170252F310800E211A3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EF05DF4A4CDE9139A294CBC /* Pods-SberTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SberTestTask.release.xcconfig"; path = "Target Support Files/Pods-SberTestTask/Pods-SberTestTask.release.xcconfig"; sourceTree = "<group>"; };
+		AAE290E82C86D53645FF4715 /* Pods_SberTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SberTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6AA8D4E0AF3BB4D10B8AB10 /* Pods-SberTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SberTestTask.debug.xcconfig"; path = "Target Support Files/Pods-SberTestTask/Pods-SberTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		E030D162252F310500E211A3 /* SberTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SberTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E030D165252F310500E211A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E030D167252F310500E211A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E030D169252F310500E211A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E030D16C252F310500E211A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E030D169252F310500E211A3 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		E030D16E252F310800E211A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E030D171252F310800E211A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E030D173252F310800E211A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC702B8AE32485CAC5F8009 /* Pods_SberTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32E1C17C992C42A54D8ADA2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAE290E82C86D53645FF4715 /* Pods_SberTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36359753EA9720C5337AD91F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6AA8D4E0AF3BB4D10B8AB10 /* Pods-SberTestTask.debug.xcconfig */,
+				7EF05DF4A4CDE9139A294CBC /* Pods-SberTestTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E030D159252F310500E211A3 = {
 			isa = PBXGroup;
 			children = (
 				E030D164252F310500E211A3 /* SberTestTask */,
 				E030D163252F310500E211A3 /* Products */,
+				36359753EA9720C5337AD91F /* Pods */,
+				32E1C17C992C42A54D8ADA2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +80,7 @@
 			children = (
 				E030D165252F310500E211A3 /* AppDelegate.swift */,
 				E030D167252F310500E211A3 /* SceneDelegate.swift */,
-				E030D169252F310500E211A3 /* ViewController.swift */,
-				E030D16B252F310500E211A3 /* Main.storyboard */,
+				E030D169252F310500E211A3 /* NewsViewController.swift */,
 				E030D16E252F310800E211A3 /* Assets.xcassets */,
 				E030D170252F310800E211A3 /* LaunchScreen.storyboard */,
 				E030D173252F310800E211A3 /* Info.plist */,
@@ -74,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E030D176252F310800E211A3 /* Build configuration list for PBXNativeTarget "SberTestTask" */;
 			buildPhases = (
+				CD8772FE69976C55E3A9F6AD /* [CP] Check Pods Manifest.lock */,
 				E030D15E252F310500E211A3 /* Sources */,
 				E030D15F252F310500E211A3 /* Frameworks */,
 				E030D160252F310500E211A3 /* Resources */,
+				E0B2FFF0252F32860004D42D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,18 +149,59 @@
 			files = (
 				E030D172252F310800E211A3 /* LaunchScreen.storyboard in Resources */,
 				E030D16F252F310800E211A3 /* Assets.xcassets in Resources */,
-				E030D16D252F310500E211A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CD8772FE69976C55E3A9F6AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SberTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B2FFF0252F32860004D42D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E030D15E252F310500E211A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E030D16A252F310500E211A3 /* ViewController.swift in Sources */,
+				E030D16A252F310500E211A3 /* NewsViewController.swift in Sources */,
 				E030D166252F310500E211A3 /* AppDelegate.swift in Sources */,
 				E030D168252F310500E211A3 /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +210,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E030D16B252F310500E211A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E030D16C252F310500E211A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E030D170252F310800E211A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +339,7 @@
 		};
 		E030D177252F310800E211A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AA8D4E0AF3BB4D10B8AB10 /* Pods-SberTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +359,7 @@
 		};
 		E030D178252F310800E211A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF05DF4A4CDE9139A294CBC /* Pods-SberTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

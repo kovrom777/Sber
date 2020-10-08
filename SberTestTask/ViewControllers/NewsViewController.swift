@@ -47,7 +47,7 @@ class NewsViewController: UIViewController {
         tableView.addSubview(refreshControl)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "NewsCell")
+        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         setConstraints()
 
     }
@@ -123,10 +123,20 @@ extension NewsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as? NewsTableViewCell
         else {
             assertionFailure("Cell is not available")
             return UITableViewCell()
+        }
+        
+        if let item = rssItems?[indexPath.item] {
+            cell.item = item
+            cell.selectionStyle = .none
+            if item.isRead {
+                cell.backgroundColor = #colorLiteral(red: 1, green: 0.8637523055, blue: 0.5971289873, alpha: 0.8678028682)
+            } else {
+                cell.backgroundColor = .white
+            }
         }
 
         return cell

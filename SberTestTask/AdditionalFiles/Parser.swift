@@ -55,6 +55,7 @@ extension ParseFeed: XMLParserDelegate {
 
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
         currentElement = elementName
+        // Обнуляем поля, дабы новости не смешивались
         if currentElement == "item" {
             title = ""
             currentDescription = ""

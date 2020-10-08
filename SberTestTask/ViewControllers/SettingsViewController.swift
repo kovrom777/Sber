@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SettingsViewControllerDelegate {
-    func updateFeed(URL:String)
+    func updateFeed(URL: String)
 }
 
 class SettingsViewController: UIViewController {
@@ -106,9 +106,7 @@ extension SettingsViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         delegate?.updateFeed(URL: urlsArray[indexPath.row])
-
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

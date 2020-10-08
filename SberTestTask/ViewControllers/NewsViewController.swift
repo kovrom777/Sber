@@ -7,13 +7,12 @@
 
 import UIKit
 
-
 class NewsViewController: UIViewController {
 
     // MARK: Variables
     private var rssItems: [RSSItem]?
     var URL: String? = UserDefaults.standard.string(forKey: "URL")
-    
+
     // MARK: Views
     let tableView: UITableView = {
         let table = UITableView()
@@ -51,8 +50,6 @@ class NewsViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         setConstraints()
-        print("URL \(URL)")
-
     }
 
     private func updateData() {
@@ -69,7 +66,7 @@ class NewsViewController: UIViewController {
                       index != 0 else {
                     return
                 }
-                //insert new elems into array
+                //Добавляем новые новости в массив 
                 let newElems = rssItems[0...index]
                 self.rssItems?.insert(contentsOf: newElems, at: 0)
                 self.tableView.reloadData()
@@ -187,6 +184,5 @@ extension NewsViewController: SettingsViewControllerDelegate {
             self.fetchdata()
         }
     }
-    
 
 }

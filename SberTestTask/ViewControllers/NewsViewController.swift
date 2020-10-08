@@ -7,10 +7,13 @@
 
 import UIKit
 
+
 class NewsViewController: UIViewController {
+
     // MARK: Variables
     private var rssItems: [RSSItem]?
     var URL: String? = UserDefaults.standard.string(forKey: "URL")
+    
     // MARK: Views
     let tableView: UITableView = {
         let table = UITableView()
@@ -45,10 +48,10 @@ class NewsViewController: UIViewController {
 
         [tableView].forEach {view.addSubview($0)}
         tableView.addSubview(refreshControl)
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: "NewsCell")
         setConstraints()
+        print("URL \(URL)")
 
     }
 
@@ -102,6 +105,10 @@ class NewsViewController: UIViewController {
 
     @objc private func didTapSettingButton() {
 
+        let settingController = SettingsViewController()
+        settingController.delegate = self
+
+        self.present(settingController, animated: true, completion: nil)
     }
 
     @objc func handleRefresh() {
@@ -171,6 +178,15 @@ extension NewsViewController: UITableViewDataSource {
 
 }
 
-extension NewsViewController: UITableViewDelegate {
+extension NewsViewController: SettingsViewControllerDelegate {
+    func updateFeed(URL: String) {
+        dismiss(animated: true) {
+            self.URL = URL
+            UserDefaults.standard.set(URL, forKey: "URL")
+            UserDefaults.standard.synchronize()
+            self.fetchdata()
+        }
+    }
+    
 
 }
